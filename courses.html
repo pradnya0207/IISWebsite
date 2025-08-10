@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - INTERFACE IT SOLUTION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Interface IT Solution Logo">
+                <span class="logo-text">
+                    <span class="logo-highlight">Interface IT Solution</span><br>
+                    <span>Baramati</span>
+                </span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="courses.html" class="nav-link active">Courses</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="register.html" class="register-btn"><i class="fas fa-user-plus"></i> Enroll Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header courses-hero">
+            <div class="container">
+                <h1 class="page-header-title">Our <span class="text-gradient">Offline Courses</span></h1>
+                <p class="page-header-subtitle">Explore our industry-relevant offline courses designed to prepare you for a successful career in technology. Hands-on training with expert instructors in our Baramati center.</p>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Hands-On <span class="text-gradient">Offline Training</span></h2>
+                    <p class="section-subtitle">Choose from our industry-relevant offline programs to kickstart your tech career with practical, hands-on experience</p>
+                </div>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-header bg-primary-light">
+                            <div class="course-icon text-primary">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="course-category">Data & AI</div>
+                            <div class="course-duration"><i class="far fa-clock"></i> 3 Months</div>
+                        </div>
+                        <div class="course-body">
+                            <h3 class="course-title">Python Programming & Data Science</h3>
+                            <p class="course-description">Master Python fundamentals and learn to analyze data using powerful libraries like Pandas, NumPy, and Matplotlib.</p>
+                            <div class="course-meta">
+                                <span class="course-level"><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                                <span class="course-mode"><i class="fas fa-laptop"></i> Offline Classes</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" onclick="toggleSyllabus(this)">View Syllabus <i class="fas fa-chevron-down"></i></a>
+                            <div class="course-syllabus">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Python Basics (Variables, Loops, Functions)</li>
+                                    <li><i class="fas fa-check-circle"></i> Object-Oriented Programming (OOP)</li>
+                                    <li><i class="fas fa-check-circle"></i> Data Structures & Algorithms</li>
+                                    <li><i class="fas fa-check-circle"></i> Pandas & NumPy for Data Manipulation</li>
+                                    <li><i class="fas fa-check-circle"></i> Matplotlib & Seaborn for Data Visualization</li>
+                                    <li><i class="fas fa-check-circle"></i> Introduction to Machine Learning (Scikit-learn)</li>
+                                    <li><i class="fas fa-check-circle"></i> Project: Build a Data Analysis Dashboard</li>
+                                </ul>
+                                <div class="course-cta">
+                                    <a href="register.html" class="btn btn-enroll">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C & C++ Programming -->
+                    <div class="course-card">
+                        <div class="course-header bg-secondary-light">
+                            <div class="course-icon text-secondary">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="course-category">Programming</div>
+                            <div class="course-duration"><i class="far fa-clock"></i> 2.5 Months</div>
+                        </div>
+                        <div class="course-body">
+                            <h3 class="course-title">C & C++ Programming</h3>
+                            <p class="course-description">Build a strong foundation in core programming logic and object-oriented concepts with C and C++.</p>
+                            <div class="course-meta">
+                                <span class="course-level"><i class="fas fa-signal"></i> Beginner to Intermediate</span>
+                                <span class="course-mode"><i class="fas fa-laptop"></i> Offline Classes</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" onclick="toggleSyllabus(this)">View Syllabus <i class="fas fa-chevron-down"></i></a>
+                            <div class="course-syllabus">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> C Language Fundamentals & Syntax</li>
+                                    <li><i class="fas fa-check-circle"></i> Pointers, Arrays, and Functions</li>
+                                    <li><i class="fas fa-check-circle"></i> C++ OOPS Concepts (Classes, Objects, Inheritance)</li>
+                                    <li><i class="fas fa-check-circle"></i> Data Structures (Linked Lists, Stacks, Queues)</li>
+                                    <li><i class="fas fa-check-circle"></i> File Handling and Exception Handling</li>
+                                    <li><i class="fas fa-check-circle"></i> Standard Template Library (STL)</li>
+                                </ul>
+                                <div class="course-cta">
+                                    <a href="register.html" class="btn btn-enroll">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Java Development Course -->
+                    <div class="course-card">
+                        <div class="course-header bg-accent-light">
+                            <div class="course-icon text-accent">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="course-category">Programming</div>
+                            <div class="course-duration"><i class="far fa-clock"></i> 3.5 Months</div>
+                        </div>
+                        <div class="course-body">
+                            <h3 class="course-title">Java Development Course</h3>
+                            <p class="course-description">From core concepts to advanced frameworks, this course covers everything you need to become a professional Java developer.</p>
+                            <div class="course-meta">
+                                <span class="course-level"><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                                <span class="course-mode"><i class="fas fa-laptop"></i> Offline Classes</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" onclick="toggleSyllabus(this)">View Syllabus <i class="fas fa-chevron-down"></i></a>
+                            <div class="course-syllabus">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Core Java & OOPS Principles</li>
+                                    <li><i class="fas fa-check-circle"></i> Collections Framework & Generics</li>
+                                    <li><i class="fas fa-check-circle"></i> Exception Handling & Multi-threading</li>
+                                    <li><i class="fas fa-check-circle"></i> JDBC for Database Connectivity</li>
+                                    <li><i class="fas fa-check-circle"></i> Servlets & JSP (Introduction to Web)</li>
+                                    <li><i class="fas fa-check-circle"></i> Project: Develop a simple web application</li>
+                                </ul>
+                                <div class="course-cta">
+                                    <a href="register.html" class="btn btn-enroll">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tally ERP 9 & Advanced Accounting -->
+                    <div class="course-card">
+                        <div class="course-header bg-warning-light">
+                            <div class="course-icon text-warning">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="course-category">Business IT</div>
+                            <div class="course-duration"><i class="far fa-clock"></i> 2 Months</div>
+                        </div>
+                        <div class="course-body">
+                            <h3 class="course-title">Tally ERP 9 & Advanced Accounting</h3>
+                            <p class="course-description">Learn to manage business finances, inventory, and taxation with Tally and fundamental accounting principles.</p>
+                            <div class="course-meta">
+                                <span class="course-level"><i class="fas fa-signal"></i> Beginner to Professional</span>
+                                <span class="course-mode"><i class="fas fa-laptop"></i> Offline Classes</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" onclick="toggleSyllabus(this)">View Syllabus <i class="fas fa-chevron-down"></i></a>
+                            <div class="course-syllabus">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Basic Accounting Concepts</li>
+                                    <li><i class="fas fa-check-circle"></i> Company Creation & Ledger Management</li>
+                                    <li><i class="fas fa-check-circle"></i> Inventory & Voucher Management</li>
+                                    <li><i class="fas fa-check-circle"></i> GST, TDS, and Payroll</li>
+                                    <li><i class="fas fa-check-circle"></i> Generating Financial Reports</li>
+                                    <li><i class="fas fa-check-circle"></i> Data Entry & Management with Excel</li>
+                                </ul>
+                                <div class="course-cta">
+                                    <a href="register.html" class="btn btn-enroll">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Analytics & Visualization -->
+                    <div class="course-card">
+                        <div class="course-header bg-primary-light">
+                            <div class="course-icon text-primary">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="course-category">Data & AI</div>
+                            <div class="course-duration"><i class="far fa-clock"></i> 3 Months</div>
+                        </div>
+                        <div class="course-body">
+                            <h3 class="course-title">Data Analytics & Visualization</h3>
+                            <p class="course-description">Turn raw data into actionable insights using tools like SQL, Excel, and popular business intelligence dashboards.</p>
+                            <div class="course-meta">
+                                <span class="course-level"><i class="fas fa-signal"></i> Intermediate</span>
+                                <span class="course-mode"><i class="fas fa-laptop"></i> Offline Classes</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" onclick="toggleSyllabus(this)">View Syllabus <i class="fas fa-chevron-down"></i></a>
+                            <div class="course-syllabus">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Microsoft Excel for Data Analysis</li>
+                                    <li><i class="fas fa-check-circle"></i> SQL for Database Queries</li>
+                                    <li><i class="fas fa-check-circle"></i> Power BI/Tableau for Visualization</li>
+                                    <li><i class="fas fa-check-circle"></i> Statistical Analysis & A/B Testing</li>
+                                    <li><i class="fas fa-check-circle"></i> Project: Create an Interactive Dashboard</li>
+                                </ul>
+                                <div class="course-cta">
+                                    <a href="register.html" class="btn btn-enroll">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Networking & IT Support -->
+                    <div class="course-card">
+                        <div class="course-header bg-success">
+                            <div class="course-icon text-light">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="course-category">IT Infrastructure</div>
+                            <div class="course-duration"><i class="far fa-clock"></i> 2.5 Months</div>
+                        </div>
+                        <div class="course-body">
+                            <h3 class="course-title">Networking & IT Support</h3>
+                            <p class="course-description">Master the essentials of computer networking, hardware, and troubleshooting to become a certified IT professional.</p>
+                            <div class="course-meta">
+                                <span class="course-level"><i class="fas fa-signal"></i> Beginner to Intermediate</span>
+                                <span class="course-mode"><i class="fas fa-laptop"></i> Offline Classes</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <a href="#" class="btn btn-primary" onclick="toggleSyllabus(this)">View Syllabus <i class="fas fa-chevron-down"></i></a>
+                            <div class="course-syllabus">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Network Fundamentals (OSI Model, TCP/IP)</li>
+                                    <li><i class="fas fa-check-circle"></i> IP Addressing & Subnetting</li>
+                                    <li><i class="fas fa-check-circle"></i> Router & Switch Configuration</li>
+                                    <li><i class="fas fa-check-circle"></i> PC Assembly & Component Installation</li>
+                                    <li><i class="fas fa-check-circle"></i> Operating System Installation & Repair</li>
+                                    <li><i class="fas fa-check-circle"></i> Basic Troubleshooting & Maintenance</li>
+                                </ul>
+                                <div class="course-cta">
+                                    <a href="register.html" class="btn btn-enroll">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Tech Journey with Hands-On Training?</h2>
+                    <p>Join hundreds of students who have transformed their careers with our industry-relevant offline programs. Visit our Baramati center for a personalized counseling session.</p>
+                    <div class="cta-buttons">
+                        <a href="register.html" class="btn btn-primary">Enroll Now</a>
+                        <a href="contact.html" class="btn btn-outline">Visit Our Center</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-brand">
+                            <img src="logo.png" alt="Interface IT Solution Logo" class="footer-logo">
+                            <h3>Interface IT Solution</h3>
+                        </div>
+                        <p class="footer-description">
+                            Premier IT training institute in Baramati providing industry-relevant education since 2015.
+                            Empowering students with practical skills for successful tech careers.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="courses.html#programming">Programming</a></li>
+                            <li><a href="courses.html#webdev">Web Development</a></li>
+                            <li><a href="courses.html#datascience">Data Science</a></li>
+                            <li><a href="courses.html#business">Business IT</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Above MRF Tyre Showroom, Baramati
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                7709507773
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                info@interfaceitsolutions.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>&copy; 2023 Interface IT Solution, Baramati. All Rights Reserved.</p>
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSyllabus(button) {
+            const card = button.closest('.course-card');
+            const syllabus = card.querySelector('.course-syllabus');
+            const isVisible = syllabus.classList.contains('active');
+            
+            // Close all other open syllabi first
+            document.querySelectorAll('.course-syllabus.active').forEach(item => {
+                if (item !== syllabus) {
+                    item.classList.remove('active');
+                    const btn = item.parentElement.querySelector('.btn-primary');
+                    btn.innerHTML = 'View Syllabus <i class="fas fa-chevron-down"></i>';
+                }
+            });
+            
+            // Toggle current syllabus
+            syllabus.classList.toggle('active');
+            
+            if (isVisible) {
+                button.innerHTML = 'View Syllabus <i class="fas fa-chevron-down"></i>';
+            } else {
+                button.innerHTML = 'Hide Syllabus <i class="fas fa-chevron-up"></i>';
+                // Scroll to show the syllabus if it's not fully visible
+                syllabus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Close syllabus when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.course-card') && !event.target.closest('.course-syllabus')) {
+                document.querySelectorAll('.course-syllabus.active').forEach(item => {
+                    item.classList.remove('active');
+                    const btn = item.parentElement.querySelector('.btn-primary');
+                    btn.innerHTML = 'View Syllabus <i class="fas fa-chevron-down"></i>';
+                });
+            }
+        });
+    </script>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

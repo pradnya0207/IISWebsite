@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface IT Solution | Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Interface IT Solution Logo">
+                <span class="logo-text">
+                    <span class="logo-highlight">Interface IT Solution</span><br>
+                    <span>Baramati</span>
+                </span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="register.html" class="register-btn"><i class="fas fa-user-plus"></i> Enroll Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Registration Header -->
+    <header class="registration-header">
+        <div class="container">
+            <h1>Join Interface IT Solution</h1>
+            <p>Start your tech journey with us today</p>
+        </div>
+    </header>
+
+    <!-- Registration Content -->
+    <div class="container">
+        <div class="registration-container">
+            <!-- Registration Form -->
+            <div class="registration-form">
+                <h2>Personal Information</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label required">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" required>
+                        <div class="invalid-feedback" id="fullName-error">Please enter a valid name (letters and spaces only)</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label required">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="example@domain.com" required>
+                        <div class="invalid-feedback" id="email-error">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+    <label for="phone" class="form-label required">Phone Number</label>
+    <input
+        type="tel"
+        id="phone"
+        name="phone"
+        class="form-control"
+        placeholder="Enter 10-digit phone number"
+        pattern="(\+91[\-\s]?)?[6-9]\d{9}"
+        title="Please enter a valid Indian mobile number (10 digits or with +91)"
+        required
+    >
+    <div class="invalid-feedback" id="phone-error">Please enter a valid Indian mobile number (10 digits starting with 6-9)</div>
+</div>
+                    <div class="form-group">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select id="gender" name="gender" class="form-control">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea id="address" name="address" class="form-control"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Course Selection -->
+            <div class="course-selection">
+                <h2>Select Your Courses</h2>
+                <p>Choose the courses you're interested in (select multiple if needed)</p>
+                
+                <div class="course-options">
+                    <label class="course-option">
+                        <input type="checkbox" name="courses" value="Python Programming & Data Science">
+                        Python Programming & Data Science
+                    </label>
+                    <label class="course-option">
+                        <input type="checkbox" name="courses" value="C & C++ Programming">
+                        C & C++ Programming
+                    </label>
+                    <label class="course-option">
+                        <input type="checkbox" name="courses" value="Java Development Course">
+                        Java Development Course
+                    </label>
+                    <label class="course-option">
+                        <input type="checkbox" name="courses" value="Tally ERP 9 & Advanced Accounting">
+                        Tally ERP 9 & Advanced Accounting
+                    </label>
+                    <label class="course-option">
+                        <input type="checkbox" name="courses" value="Data Analytics & Visualization">
+                        Data Analytics & Visualization
+                    </label>
+                    <label class="course-option">
+                        <input type="checkbox" name="courses" value="Networking & IT Support">
+                        Networking & IT Support
+                    </label>
+                    <label class="course-option">
+                        <input type="checkbox" name="courses" value="other" id="otherCourseCheckbox">
+                        Other (Please specify)
+                    </label>
+                    <div class="form-group other-course-input" id="otherCourseInput" style="display: none;">
+                        <label for="otherCourseText" class="form-label">Please specify your desired course:</label>
+                        <input type="text" id="otherCourseText" name="otherCourseText" class="form-control" placeholder="Enter course name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferredBatch">Preferred Batch Timing</label>
+                    <select id="preferredBatch" name="preferredBatch" class="form-control">
+                        <option value="">Select Batch Timing</option>
+                        <option value="Morning (9AM - 12PM)">Morning (9AM - 12PM)</option>
+                        <option value="Afternoon (2PM - 5PM)">Afternoon (2PM - 5PM)</option>
+                        <option value="Evening (6PM - 9PM)">Evening (6PM - 9PM)</option>
+                        <option value="Weekend (10AM - 4PM)">Weekend (10AM - 4PM)</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn">
+                    <span id="buttonText">Complete Registration</span>
+                </button>
+                <div id="response" class="response"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-brand">
+                            <img src="logo.png" alt="Interface IT Solution Logo" class="footer-logo">
+                            <h3>Interface IT Solution</h3>
+                        </div>
+                        <p class="footer-description">
+                            Premier IT training institute in Baramati providing industry-relevant education since 2015.
+                            Empowering students with practical skills for successful tech careers.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Courses</h3>
+                        <ul class="footer-links">
+                            <li><a href="courses.html#programming">Programming</a></li>
+                            <li><a href="courses.html#webdev">Web Development</a></li>
+                            <li><a href="courses.html#datascience">Data Science</a></li>
+                            <li><a href="courses.html#business">Business IT</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Above MRF Tyre Showroom, Baramati
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                7709507773
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                info@interfaceitsolutions.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>&copy; 2023 Interface IT Solution, Baramati. All Rights Reserved.</p>
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hiddenFrame" style="display:none;"></iframe>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navList = document.querySelector('.nav-list');
+            
+            mobileMenu.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Course selection styling
+            const courseOptions = document.querySelectorAll('.course-option');
+            courseOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const checkbox = this.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked;
+                    this.classList.toggle('selected', checkbox.checked);
+                    
+                    // Handle "Other" course option
+                    if (checkbox.id === 'otherCourseCheckbox') {
+                        const otherInput = document.getElementById('otherCourseInput');
+                        if (checkbox.checked) {
+                            otherInput.style.display = 'block';
+                        } else {
+                            otherInput.style.display = 'none';
+                            document.getElementById('otherCourseText').value = '';
+                        }
+                    }
+                });
+            });
+            
+            // Handle "Other" course text input
+            const otherCourseCheckbox = document.getElementById('otherCourseCheckbox');
+            const otherCourseText = document.getElementById('otherCourseText');
+            
+            if (otherCourseCheckbox && otherCourseText) {
+                otherCourseText.addEventListener('input', function() {
+                    if (otherCourseCheckbox.checked && this.value.trim() !== '') {
+                        otherCourseCheckbox.value = this.value.trim();
+                    } else if (otherCourseCheckbox.checked) {
+                        otherCourseCheckbox.value = 'other';
+                    }
+                });
+            }
+
+            // Form elements
+            const form = document.getElementById('registrationForm');
+            
+            // Real-time validation
+            form.addEventListener('input', function(e) {
+                const field = e.target;
+                validateField(field);
+                
+                // Format phone number in real-time
+                if (field.id === 'phone') {
+                    formatPhoneNumber(field);
+                }
+            });
+            
+            // Format phone number function
+            function formatPhoneNumber(field) {
+                // Remove all non-digit characters
+                let phoneNumber = field.value.replace(/\D/g, '');
+                
+                // Limit to 10 digits for Indian mobile numbers
+                if (phoneNumber.length > 10) {
+                    phoneNumber = phoneNumber.substring(0, 10);
+                }
+                
+                // Format as XXX XXX XXXX
+                if (phoneNumber.length > 6) {
+                    phoneNumber = phoneNumber.substring(0, 3) + ' ' + phoneNumber.substring(3, 6) + ' ' + phoneNumber.substring(6);
+                } else if (phoneNumber.length > 3) {
+                    phoneNumber = phoneNumber.substring(0, 3) + ' ' + phoneNumber.substring(3);
+                }
+                
+                field.value = phoneNumber;
+            }
+
+            // Field validation function
+            function validateField(field) {
+                const errorElement = document.getElementById(`${field.id}-error`);
+                
+                // Reset field style
+                field.classList.remove('is-invalid');
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                }
+                
+                // Check required fields
+                if (field.required && !field.value.trim()) {
+                    field.classList.add('is-invalid');
+                    if (errorElement) {
+                        errorElement.textContent = 'This field is required';
+                        errorElement.style.display = 'block';
+                    }
+                    return false;
+                }
+                
+                // Validate full name (letters and spaces only)
+                if (field.id === 'fullName' && field.value.trim()) {
+                    const nameRegex = /^[a-zA-Z\s]+$/;
+                    if (!nameRegex.test(field.value.trim())) {
+                        field.classList.add('is-invalid');
+                        if (errorElement) {
+                            errorElement.textContent = 'Please enter a valid name (letters and spaces only)';
+                            errorElement.style.display = 'block';
+                        }
+                        return false;
+                    }
+                }
+                
+                // Validate email format
+                if (field.type === 'email' && field.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value.trim())) {
+                        field.classList.add('is-invalid');
+                        if (errorElement) {
+                            errorElement.textContent = 'Please enter a valid email address';
+                            errorElement.style.display = 'block';
+                        }
+                        return false;
+                    }
+                }
+                
+                // Validate phone number format with better validation
+                if (field.id === 'phone' && field.value.trim()) {
+                    // Remove all non-digit characters except +
+                    let phoneValue = field.value.replace(/\D/g, '');
+                    
+                    // Check if it's a valid Indian mobile number
+                    // Must be exactly 10 digits starting with 6, 7, 8, or 9
+                    const phoneRegex = /^[6-9]\d{9}$/;
+                    
+                    if (!phoneRegex.test(phoneValue)) {
+                        field.classList.add('is-invalid');
+                        if (errorElement) {
+                            errorElement.textContent = 'Please enter a valid Indian mobile number (10 digits starting with 6-9)';
+                            errorElement.style.display = 'block';
+                        }
+                        return false;
+                    }
+                }
+                
+                return true;
+            }
+
+            
+            // Form submission
+            const responseDiv = document.getElementById('response');
+            const submitBtn = document.getElementById('submitBtn');
+            const buttonText = document.getElementById('buttonText');
+            
+            // Your Google Apps Script URL
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz87MlpK2uR3J3cjRmSLFZ7N1bngSVEOFtqVIERatYD-VFjmJpiRxSU4TPqcrqqYx41/exec';
+
+            submitBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Clear previous response
+                responseDiv.className = 'response';
+                responseDiv.textContent = '';
+                
+                // Validate form
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+                
+                requiredFields.forEach(field => {
+                    if (!validateField(field)) {
+                        isValid = false;
+                    }
+                });
+                
+
+                // Validate email format
+                const emailField = document.getElementById('email');
+                if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+                    emailField.style.borderColor = '#ea4335';
+                    isValid = false;
+                }
+
+                // Validate at least one course is selected
+                const selectedCourses = document.querySelectorAll('input[name="courses"]:checked');
+                if (selectedCourses.length === 0) {
+                    responseDiv.className = 'error';
+                    responseDiv.textContent = 'Please select at least one course.';
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    responseDiv.className = 'error';
+                    responseDiv.textContent = 'Please fill all required fields correctly.';
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.disabled = true;
+                buttonText.innerHTML = '<i class="fas fa-spinner spinner"></i> Processing...';
+                
+                // Prepare form data
+                const formData = new FormData(form);
+                const data = new URLSearchParams();
+                
+                // Add personal info
+                for (const [key, value] of formData.entries()) {
+                    data.append(key, value);
+                }
+                
+                // Add selected courses
+                const courses = [];
+                document.querySelectorAll('input[name="courses"]:checked').forEach(course => {
+                    // Handle "Other" course option
+                    if (course.id === 'otherCourseCheckbox') {
+                        const otherText = document.getElementById('otherCourseText').value.trim();
+                        if (otherText !== '') {
+                            courses.push(otherText);
+                        }
+                    } else {
+                        courses.push(course.value);
+                    }
+                });
+                data.append('courses', courses.join(', '));
+                
+                // Add batch timing
+                data.append('preferredBatch', document.getElementById('preferredBatch').value || 'Not specified');
+                
+                // Add timestamp
+                data.append('timestamp', new Date().toISOString());
+                
+                // Submit form
+                fetch(scriptURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: data
+                })
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'success') {
+                        responseDiv.className = 'success';
+                        responseDiv.textContent = 'Registration successful! We will contact you shortly.';
+                        form.reset();
+                        document.querySelectorAll('input[name="courses"]').forEach(cb => cb.checked = false);
+                        document.getElementById('preferredBatch').value = '';
+                    } else {
+                        throw new Error(data.message || 'Registration failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    responseDiv.className = 'error';
+                    responseDiv.textContent = 'There was an error processing your registration. Please try again later.';
+                    
+                    // Fallback to iframe method
+                    form.action = scriptURL;
+                    form.method = "POST";
+                    form.target = "hiddenFrame";
+                    form.submit();
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    buttonText.textContent = 'Complete Registration';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
