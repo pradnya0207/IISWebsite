@@ -98,31 +98,31 @@
                 
                 <div class="course-options">
                     <label class="course-option">
-                        <input type="checkbox" name="courses" value="Python Programming & Data Science">
+                        <input type="checkbox" name="course" value="Python Programming & Data Science">
                         Python Programming & Data Science
                     </label>
                     <label class="course-option">
-                        <input type="checkbox" name="courses" value="C & C++ Programming">
+                        <input type="checkbox" name="course" value="C & C++ Programming">
                         C & C++ Programming
                     </label>
                     <label class="course-option">
-                        <input type="checkbox" name="courses" value="Java Development Course">
+                        <input type="checkbox" name="course" value="Java Development Course">
                         Java Development Course
                     </label>
                     <label class="course-option">
-                        <input type="checkbox" name="courses" value="Tally ERP 9 & Advanced Accounting">
+                        <input type="checkbox" name="course" value="Tally ERP 9 & Advanced Accounting">
                         Tally ERP 9 & Advanced Accounting
                     </label>
                     <label class="course-option">
-                        <input type="checkbox" name="courses" value="Data Analytics & Visualization">
+                        <input type="checkbox" name="course" value="Data Analytics & Visualization">
                         Data Analytics & Visualization
                     </label>
                     <label class="course-option">
-                        <input type="checkbox" name="courses" value="Networking & IT Support">
+                        <input type="checkbox" name="course" value="Networking & IT Support">
                         Networking & IT Support
                     </label>
                     <label class="course-option">
-                        <input type="checkbox" name="courses" value="other" id="otherCourseCheckbox">
+                        <input type="checkbox" name="course" value="other" id="otherCourseCheckbox">
                         Other (Please specify)
                     </label>
                     <div class="form-group other-course-input" id="otherCourseInput" style="display: none;">
@@ -418,7 +418,7 @@
                 }
 
                 // Validate at least one course is selected
-                const selectedCourses = document.querySelectorAll('input[name="courses"]:checked');
+                const selectedCourses = document.querySelectorAll('input[name="course"]:checked');
                 if (selectedCourses.length === 0) {
                     responseDiv.className = 'error';
                     responseDiv.textContent = 'Please select at least one course.';
@@ -446,9 +446,9 @@
                 
                 // Add selected courses
                 const courses = [];
-                document.querySelectorAll('input[name="courses"]:checked').forEach(course => {
-                    // Handle "Other" course option
-                    if (course.id === 'otherCourseCheckbox') {
+                document.querySelectorAll('input[name="course"]:checked').forEach(course => {
+                    // Handle "Other" course option - use the current value of the text field
+                    if (course.value === 'other' && course.id === 'otherCourseCheckbox') {
                         const otherText = document.getElementById('otherCourseText').value.trim();
                         if (otherText !== '') {
                             courses.push(otherText);
@@ -457,7 +457,7 @@
                         courses.push(course.value);
                     }
                 });
-                data.append('courses', courses.join(', '));
+                data.append('course', courses.join(', '));
                 
                 // Add batch timing
                 data.append('preferredBatch', document.getElementById('preferredBatch').value || 'Not specified');
@@ -482,7 +482,7 @@
                         responseDiv.className = 'success';
                         responseDiv.textContent = 'Registration successful! We will contact you shortly.';
                         form.reset();
-                        document.querySelectorAll('input[name="courses"]').forEach(cb => cb.checked = false);
+                        document.querySelectorAll('input[name="course"]').forEach(cb => cb.checked = false);
                         document.getElementById('preferredBatch').value = '';
                     } else {
                         throw new Error(data.message || 'Registration failed');
